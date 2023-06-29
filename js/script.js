@@ -6,18 +6,18 @@ const container = document.querySelector('.container__text')
 // const next = document.querySelectorAll('.focus').nextElementSibling
 
 const showPara = e => {
-	// hidden.forEach(deleteStyle)
-	// answer.forEach(item => item.classList.remove('show'))
-	e.target.nextElementSibling.classList.toggle('show')
-	title.forEach(item => item.classList.remove('boldfocus'))
-	e.target.classList.add('boldfocus')
-	img.forEach(item => item.classList.remove('arrow'))
-	e.target.firstElementChild.classList.add('arrow')
 	
-	if (e.target.matches('.boldfocus')) {
-	console.log('elo');
+	if (e.target.matches('.focus')) {
+		e.target.firstElementChild.classList.toggle('arrow')
+		e.target.nextElementSibling.classList.toggle('show')
+		e.target.classList.toggle('boldfocus')
+	} else if (e.target.matches('img')) {
+		// e.target.firstElementChild.classList.toggle('arrow')
+		// e.target.nextElementSibling.classList.toggle('show')
+		// e.target.classList.toggle('boldfocus')
+		console.log(e);
+
 	}
 }
 
-title.forEach(item => item.addEventListener('click', showPara))
-// container.forEach(item => item.addEventListener('click', showPara))
+container.addEventListener('click', showPara)
