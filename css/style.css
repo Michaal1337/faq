@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: hsl(273, 75%, 66%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  background-color: hsl(240, 5%, 91%);
+  border-radius: 30px;
+  padding: 10em 2em 3em;
+  width: 330px;
+  height: 500px;
+}
+.container .logo__1 {
+  position: absolute;
+  top: -22%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+}
+.container .logo__2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container__text {
+  overflow: hidden;
+  height: 400px;
+}
+.container__text .hidden {
+  display: none;
+  margin-top: 0.5em;
+}
+.container__text img {
+  transition: transform 0.5s ease;
+}
+.container__text .arrow {
+  transform: rotateX(180deg);
+}
+.container__text .show {
+  display: block;
+}
+.container__text .boldfocus {
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+.container__text .focus {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.container__text .focus:hover {
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+.container__text p {
+  position: relative;
+  font-size: 1.5rem;
+  color: hsl(240, 6%, 50%);
+}
+.container__text img {
+  position: absolute;
+  right: 0;
+  top: 40%;
+}
+.container__text h1 {
+  text-align: center;
+  margin: 0.5em 0 1em;
+  margin-bottom: 0.5em;
+  font-size: 3.5rem;
+}
+.container__text hr {
+  margin: 1em 0;
+  color: hsl(240, 6%, 50%);
+}/*# sourceMappingURL=style.css.map */

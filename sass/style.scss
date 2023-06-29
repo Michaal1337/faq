@@ -1,0 +1,115 @@
+@use './colors' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+	background-color: $SoftViolet;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	// width: 100vw;
+}
+
+.container {
+	position: relative;
+	background-color: $Lightgrayishblue;
+	border-radius: 30px;
+	// margin: 0 2em;
+	// margin-top: 5em;
+	padding: 10em 2em 3em;
+	width: 330px;
+	height: 500px;
+
+	.logo {
+		// height: 100vh;
+		// position: relative;
+		// margin-top: 10em;
+		// padding-top: 5em;
+		// position: absolute;
+		// top: -27%;
+		// left: 13%;
+		// transform: translateX(-50%);
+
+		&__1 {
+			position: absolute;
+			top: -22%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 250px;
+		}
+		&__2 {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__text {
+		overflow: hidden;
+		height: 400px;
+		.hidden {
+			display: none;
+			margin-top: 0.5em;
+		}
+		img {
+			transition: transform .5s ease;
+		}
+		.arrow {
+			transform: rotateX(180deg);
+		}
+		.show {
+			display: block;
+		}
+		.boldfocus {
+			font-weight: 700;
+			color: $Verydarkblue;
+		}
+		.focus {
+			cursor: pointer;
+			transition: color 0.3s;
+		}
+		.focus:hover {
+			font-weight: 700;
+			color: $Verydarkblue;
+		}
+
+		p {
+			position: relative;
+			font-size: 1.5rem;
+			color: $Darkgrayishblue;
+		}
+
+		img {
+			position: absolute;
+			right: 0;
+			top: 40%;
+		}
+
+		h1 {
+			text-align: center;
+			// padding: 2em 0 1em;
+			margin: 0.5em 0 1em;
+			margin-bottom: 0.5em;
+			font-size: 3.5rem;
+		}
+		hr {
+			margin: 1em 0;
+			color: $Darkgrayishblue;
+		}
+	}
+}
