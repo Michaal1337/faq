@@ -46,40 +46,43 @@ body {
   overflow: hidden;
   height: 400px;
 }
-.container__text .hidden {
+.container__text .container-faq {
+  position: relative;
+}
+.container__text .container-faq .hidden {
   display: none;
   margin-top: 0.5em;
 }
-.container__text img {
-  transition: transform 0.5s ease;
-}
-.container__text .arrow {
+.container__text .container-faq .arrow {
   transform: rotateX(180deg);
 }
-.container__text .show {
+.container__text .container-faq .show {
   display: block;
 }
-.container__text .boldfocus {
+.container__text .container-faq .boldfocus {
   font-weight: 700;
   color: hsl(238, 29%, 16%);
 }
-.container__text .focus {
+.container__text .container-faq .focus {
   cursor: pointer;
   transition: color 0.3s;
 }
-.container__text .focus:hover {
+.container__text .container-faq .focus:hover {
   font-weight: 700;
   color: hsl(238, 29%, 16%);
 }
-.container__text p {
+.container__text .container-faq p {
   position: relative;
   font-size: 1.5rem;
   color: hsl(240, 6%, 50%);
 }
-.container__text img {
+.container__text .container-faq img {
   position: absolute;
   right: 0;
   top: 40%;
+  top: 8px;
+  transition: transform 0.5s ease;
+  pointer-events: none;
 }
 .container__text h1 {
   text-align: center;

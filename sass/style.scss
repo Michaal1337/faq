@@ -62,44 +62,48 @@ body {
 	&__text {
 		overflow: hidden;
 		height: 400px;
-		.hidden {
-			display: none;
-			margin-top: 0.5em;
-		}
-		img {
-			transition: transform .5s ease;
-		}
-		.arrow {
-			transform: rotateX(180deg);
-		}
-		.show {
-			display: block;
-		}
-		.boldfocus {
-			font-weight: 700;
-			color: $Verydarkblue;
-		}
-		.focus {
-			cursor: pointer;
-			transition: color 0.3s;
-		}
-		.focus:hover {
-			font-weight: 700;
-			color: $Verydarkblue;
-		}
-
-		p {
+		
+		.container-faq {
 			position: relative;
-			font-size: 1.5rem;
-			color: $Darkgrayishblue;
-		}
+			.hidden {
+				display: none;
+				margin-top: 0.5em;
+			}
+			.arrow {
+				transform: rotateX(180deg);
+			}
+			.show {
+				display: block;
+			}
+			.boldfocus {
+				font-weight: 700;
+				color: $Verydarkblue;
+			}
+			.focus {
+				cursor: pointer;
+				transition: color 0.3s;
+			}
+			.focus:hover {
+				font-weight: 700;
+				color: $Verydarkblue;
+			}
+			p {
+				position: relative;
+				font-size: 1.5rem;
+				// display: block;
+				color: $Darkgrayishblue;
+				// z-index: 100;
+			}
 
-		img {
-			position: absolute;
-			right: 0;
-			top: 40%;
+			img {
+				position: absolute;
+				right: 0;
+				top: 40%;
+				top: 8px;
+				transition: transform 0.5s ease;
+				pointer-events: none;
+			}
 		}
-
 		h1 {
 			text-align: center;
 			// padding: 2em 0 1em;
