@@ -28,71 +28,58 @@ body {
 	position: relative;
 	background-color: $Lightgrayishblue;
 	border-radius: 30px;
-	// margin: 0 2em;
-	// margin-top: 5em;
 	padding: 10em 2em 3em;
 	width: 330px;
 	height: 500px;
 
 	.logo {
-		// height: 100vh;
-		// position: relative;
-		// margin-top: 10em;
-		// padding-top: 5em;
-		// position: absolute;
-		// top: -27%;
-		// left: 13%;
-		// transform: translateX(-50%);
-
 		&__1 {
 			position: absolute;
-			top: -22%;
+			background-image: url('../img/illustration-woman-online-mobile.svg');
+			top: -24%;
 			left: 50%;
 			transform: translateX(-50%);
-			width: 250px;
+			width: 80%;
+			height: 40%;
 		}
 		&__2 {
 			position: absolute;
+			background-image: url('../img/bg-pattern-mobile.svg');
 			top: 0;
 			left: 50%;
 			transform: translateX(-50%);
+			width: 73%;
+			height: 20.8%;
 		}
 	}
 
 	&__text {
 		overflow: hidden;
 		height: 400px;
-		
+
+		.container-faq:hover .question {
+			font-weight: 700;
+			color: $Verydarkblue;
+		}
+
 		.container-faq {
 			position: relative;
-			.hidden {
+			cursor: pointer;
+
+			.answer {
 				display: none;
 				margin-top: 0.5em;
 			}
-			.arrow {
-				transform: rotateX(180deg);
-			}
-			.show {
-				display: block;
-			}
-			.boldfocus {
-				font-weight: 700;
-				color: $Verydarkblue;
-			}
-			.focus {
-				cursor: pointer;
+
+			.question {
 				transition: color 0.3s;
 			}
-			.focus:hover {
-				font-weight: 700;
-				color: $Verydarkblue;
-			}
+
 			p {
 				position: relative;
 				font-size: 1.5rem;
-				// display: block;
 				color: $Darkgrayishblue;
-				// z-index: 100;
+				pointer-events: none;
 			}
 
 			img {
@@ -100,20 +87,53 @@ body {
 				right: 0;
 				top: 40%;
 				top: 8px;
-				transition: transform 0.5s ease;
+				transition: transform 0.2s ease-in;
 				pointer-events: none;
 			}
 		}
+
 		h1 {
 			text-align: center;
-			// padding: 2em 0 1em;
 			margin: 0.5em 0 1em;
 			margin-bottom: 0.5em;
 			font-size: 3.5rem;
 		}
+
 		hr {
 			margin: 1em 0;
 			color: $Darkgrayishblue;
+		}
+	}
+
+	.active .question {
+		font-weight: 700;
+		color: $Verydarkblue;
+	}
+	.active img {
+		transform: rotateX(180deg);
+	}
+	.active .answer {
+		display: block;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 800px;
+		display: flex;
+		// justify-content: flex-end;
+		.logo {
+			// position: relative;
+			&__1 {
+				position: static;
+				background-image: url('../img/illustration-woman-online-mobile.svg');
+				// width: 300px;
+				// height: 150px;
+	
+			}
+			&__2 {
+				position: static;
+			}
 		}
 	}
 }

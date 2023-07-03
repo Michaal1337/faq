@@ -31,57 +31,53 @@ body {
 }
 .container .logo__1 {
   position: absolute;
-  top: -22%;
+  background-image: url("../img/illustration-woman-online-mobile.svg");
+  top: -24%;
   left: 50%;
   transform: translateX(-50%);
-  width: 250px;
+  width: 80%;
+  height: 40%;
 }
 .container .logo__2 {
   position: absolute;
+  background-image: url("../img/bg-pattern-mobile.svg");
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: 73%;
+  height: 20.8%;
 }
 .container__text {
   overflow: hidden;
   height: 400px;
 }
+.container__text .container-faq:hover .question {
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
 .container__text .container-faq {
   position: relative;
+  cursor: pointer;
 }
-.container__text .container-faq .hidden {
+.container__text .container-faq .answer {
   display: none;
   margin-top: 0.5em;
 }
-.container__text .container-faq .arrow {
-  transform: rotateX(180deg);
-}
-.container__text .container-faq .show {
-  display: block;
-}
-.container__text .container-faq .boldfocus {
-  font-weight: 700;
-  color: hsl(238, 29%, 16%);
-}
-.container__text .container-faq .focus {
-  cursor: pointer;
+.container__text .container-faq .question {
   transition: color 0.3s;
-}
-.container__text .container-faq .focus:hover {
-  font-weight: 700;
-  color: hsl(238, 29%, 16%);
 }
 .container__text .container-faq p {
   position: relative;
   font-size: 1.5rem;
   color: hsl(240, 6%, 50%);
+  pointer-events: none;
 }
 .container__text .container-faq img {
   position: absolute;
   right: 0;
   top: 40%;
   top: 8px;
-  transition: transform 0.5s ease;
+  transition: transform 0.2s ease-in;
   pointer-events: none;
 }
 .container__text h1 {
@@ -93,4 +89,28 @@ body {
 .container__text hr {
   margin: 1em 0;
   color: hsl(240, 6%, 50%);
+}
+.container .active .question {
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+.container .active img {
+  transform: rotateX(180deg);
+}
+.container .active .answer {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 800px;
+    display: flex;
+  }
+  .container .logo__1 {
+    position: static;
+    background-image: url("../img/illustration-woman-online-mobile.svg");
+  }
+  .container .logo__2 {
+    position: static;
+  }
 }/*# sourceMappingURL=style.css.map */

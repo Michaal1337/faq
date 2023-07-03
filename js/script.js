@@ -1,33 +1,15 @@
-const title = document.querySelectorAll('.focus')
-const answer = document.querySelectorAll('.hidden')
-const img = document.querySelectorAll('img')
-const container = document.querySelector('.container__text')
-// const show = document.querySelector('.show')
-// const next = document.querySelectorAll('.focus').nextElementSibling
+// const title = document.querySelectorAll('.focus')
+// const answer = document.querySelectorAll('.hidden')
+// const img = document.querySelectorAll('img')
+// const container = document.querySelector('.container__text')
+const faq = document.querySelectorAll('.container-faq')
 
-const showPara = e => {
-	// console.log(e);
-	if (e.target.matches('.focus')) {
-		e.target.nextElementSibling.classList.toggle('arrow')
-		e.target.nextElementSibling.nextElementSibling.classList.toggle('show')
-		e.target.classList.toggle('boldfocus')
-		// console.log(e.target.previousSibling);
-		// console.log(e.target.previousElementSibling);
-	
-		
-	} else if (e.target.matches('img')) {
-	// 	e.target.firstElementChild.classList.toggle('arrow')
-	// 	e.target.nextElementSibling.classList.toggle('show')
-	// 	e.target.classList.toggle('boldfocus')
-	// 	console.log(e);
-		// console.log(e.target.previousSibling);
-		console.log(e.target.previousElementSibling);
-		console.log(e.target.nextElementSibling);
-		// console.log(e.target.nextSibling);
-
+faq.forEach(item => item.addEventListener('click', () => {
+	if(item.classList.contains('active')) {
+		item.classList.remove('active')
 	} else {
-		console.log('elo');
+		faq.forEach(item2 => item2.classList.remove('active'))
+		item.classList.toggle('active')
 	}
-}
-
-container.addEventListener('click', showPara)
+	
+}))
